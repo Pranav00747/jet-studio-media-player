@@ -22,8 +22,9 @@ c1.InsertOne(doc);
 }
 
 
-add_it(new BsonDocument{{"Tag Name": "SWE vs Intern"}});
-add_it(new BsonDocument{{"Dog Name":"Chotu Raj", " My House Made":"Manju", "Their Boss":"PCK"}});
-add_it(new BsonDocument{{"My Cousin":"Best creative writer like normal graduates."});
-add_it(new BsonDocument{{"Name":"Deo", "Domain": "Senior Data Scientist", "Role":"Friend"}});
+add_it(new BsonDocument{{"Tag Name": "SWE vs Intern"}}); // {Tag Name: SWE vs Intern}
+add_it(new BsonDocument{{"Dog Name":"Chotu Raj", " My House Made":"Manju", "Their Boss":"PCK"}}); // {Dog Name: Chotu Raj, My House Made: Manju, Their Boss: PCK}
+add_it(new BsonDocument{{"My Cousin":"Best creative writer like normal graduates."}); // {My Cousin: Best creative weiter like normal graduates.}
+add_it(new BsonDocument{{"Name":"Deo", "Domain": "Senior Data Scientist", "Role":"Friend"}}); // {Name:Deo, Domain:Senior Data Scientist, Role:Friend}
+                        
 
