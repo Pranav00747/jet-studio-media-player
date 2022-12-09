@@ -12,19 +12,17 @@ e.g
 add_song_info(fdlg.GetText(), time_st.GetText());
 
 #samples
-
-public void add_it(BsonDocument doc)
+public class sample_db
 {
-MongoClient mg1 = new MongoClient("url");
-IMongoDatabase db1 = mg1.GetDatabase("mydb");
-var c1 = db1.GetCollection<BsonDocument>("list");
-c1.InsertOne(doc);
+       public void add_it(BsonDocument doc)
+       {
+             MongoClient m_ = new MongoClient("..ip/url");
+             IMongoDatabase db_ = m_.getDatabase("mydata");
+             var info_c = db_.GetCollection<BsonDocument>("coll_");
+             info_c.Inseet_One(doc);
+       }
 }
 
-
-add_it(new BsonDocument{{"Tag Name": "SWE vs Intern"}}); // {Tag Name: SWE vs Intern}
-add_it(new BsonDocument{{"Dog Name":"Chotu Raj", " My House Made":"Manju", "Their Boss":"PCK"}}); // {Dog Name: Chotu Raj, My House Made: Manju, Their Boss: PCK}
-add_it(new BsonDocument{{"My Cousin":"Best creative writer like normal graduates."}); // {My Cousin: Best creative weiter like normal graduates.}
-add_it(new BsonDocument{{"Name":"Deo", "Domain": "Senior Data Scientist", "Role":"Friend"}}); // {Name:Deo, Domain:Senior Data Scientist, Role:Friend}
-                        
+sample_db dbs = new sample_dbs();
+dbs.add_it({"Name":"Pranav", "Level":"Expert > 9"});
 
