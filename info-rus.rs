@@ -20,20 +20,15 @@ let sng_db = song_dbs{};
 sng_dbs.add_song_("Bezos I Bo Burnham", "00:07"); 
 
 #e.g
-fn add_dat(qry : string)
+fn add_dat(query : string)
 {
-     let cnc = Connection::open("list.db");
-     cnc.excute(qry);
+    let db = Connection::open("only_.db");
+    if query !=""
+    {
+        db.execute(query);
+  }
 }
-let mut query1 = "insert into mydb (TagName) values('SWE vs Intern')";
-add_dat(query1); 
 
-let mut query2 = "insert into mydb (DogName, MyHouseMade, TheirBoss) values('Chotu Raj', 'Manju', 'PCK')";
-add_dat(query2); 
-
-let mut query3 = "insert into mydb (MyCousin) values('Best creative writer like normal grduates')";
-add_dat(query3); 
-
-let mut query4 = "insert into mydb (Name, Domain, Role) values('Deo', 'Secnior Data Scientist', 'Friends')";
-add_dat(query4); 
+add_dat("insert into org (name, type) values('Pranav', 'Good and deserving person')");
+    
       
