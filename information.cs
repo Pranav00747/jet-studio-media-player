@@ -24,5 +24,5 @@ public class sample_db
 }
 
 sample_db dbs = new sample_dbs();
-dbs.add_it({"Name":"Pranav", "Level":"Expert > 9"});
+dbs.add_it(new BsonDocoument({"Name":"Pranav", "Level":"Expert > 9"}));
 
